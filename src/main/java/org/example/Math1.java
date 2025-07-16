@@ -3,7 +3,7 @@ package org.example;
 public class Math1 {
 
 
-    public static void findMinmax(int[] array) {
+    public static int findMinmax(int[] array) {
         if (array.length == 0) {
             throw new IllegalArgumentException("Array must have at least one element");
         }
@@ -21,6 +21,8 @@ public class Math1 {
         }
         System.out.println("Maximum: " + max);
         System.out.println("Minimum: " + min);
+
+        return max - min;
     }
 
 
@@ -53,7 +55,6 @@ public static final Integer POW = 2;
         return Math.pow(number, POW);
     }
     public static void calculateParty(double x, double y) {
-
         double result = 0.0;
 
         double n1= (4 * y) / 5;
