@@ -3,7 +3,7 @@ package org.example;
 public class Math1 {
 
 
-    public static int task1(int[] array) {
+    public static void findMinmax(int[] array) {
         if (array.length == 0) {
             throw new IllegalArgumentException("Array must have at least one element");
         }
@@ -19,14 +19,12 @@ public class Math1 {
                 min = num;
             }
         }
-
-        return max - min;
+        System.out.println("Maximum: " + max);
+        System.out.println("Minimum: " + min);
     }
 
-    // Task 2
-    // Write a Java method that finds the smallest and second smallest elements of a given array and prints them
-    // to the console.
-    public static int task2(int[] array) {
+
+    public static void findSmallest(int[] array) {
         if (array.length < 2) {
             throw new IllegalArgumentException("Array must have at least two elements");
         }
@@ -46,29 +44,25 @@ public class Math1 {
         System.out.println("Smallest: " + smallest);
         System.out.println("Second Smallest: " + secondSmallest);
 
-        return secondSmallest;
 
     }
 
 
-//Task 3
-    //Write a Java method that calculates the result of the following mathematical expression, where x and y are
-    // two variables that have been pre-set in your code:
 public static final Integer POW = 2;
     public static Double getSquare(Double number) {
         return Math.pow(number, POW);
     }
-    public static double task3(double x, double y) {
-        double result =0;
+    public static void calculateParty(double x, double y) {
 
-        double n1= 4*y/5;
+        double result = 0.0;
+
+        double n1= (4 * y) / 5;
         double n2= (n1 - x);
         double n3= getSquare(x);
         double n4= getSquare(n2);
         result = n3 + n4;
 
         System.out.println("Result task 3: " + result);
-        return result;
 
     }
 }
